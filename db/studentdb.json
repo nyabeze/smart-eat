@@ -1,0 +1,23 @@
+[
+  {
+    "name":"Jane"
+    ,"surname":"Ropafadzo"
+    ,"registration":"R211823N"
+    ,"password":"32345678"
+    ,"balance":"3745.57"
+  }
+  ,{
+    "name":"Tapiwa"
+    ,"surname":"Sango"
+    ,"registration":"R314429J"
+    ,"password":"22345678"
+    ,"balance":"35148.07"
+  }
+  ,{
+    "name":"Bornface"
+    ,"surname":"Mpereki"
+    ,"registration":"R231028K"
+    ,"password":"12345678"
+    ,"balance":"89735.44"
+  }
+]

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartEat | Admin Page</title>
+  <link rel="stylesheet" href="styles/admin_style.css">
+</head>
+<body>
+  <nav>
+    <a href="admin.html">
+      <img src="images/logo.png">
+    </a>
+    <div id="adminDetails">
+      <div id="adminNameContainer">
+        <h2><span>ADMIN NAME</span></h2>
+        <div id="adminName"></div>
+      </div>
+      <div id="adminIDcontainer">
+        <h2><span>ADMIN EMPLOYER ID</span></h2> 
+        <div id="adminID"></div>
+      </div> 
+    </div>
+    <div id="adminLogin">
+      <button>Login</button>
+    </div>
+  </nav>
+  <div id="adminPopup">
+    <span id="adminCloseModal">+</span>
+    <form action="#" id="adminLoginForm">
+      <label for="adminUserInput">Username</label>
+      <input type="text" id="adminUserInput" min="8" placeholder="Username" required>
+      <label for="adminPassInput">Password</label>
+      <input type="password" id="adminPassInput" placeholder="Password" required>
+      <input type="submit" value="Sign In">
+    </form>
+  </div> <!-- END OF POPUP -->
+  <!-- END OF NAV -->
+</nav>
+<h1>SmartEat Admin Panel</h1>
+<section>
+  <form action="#" id="addMenuItems">
+  <table id="menuTable">
+    <tr>
+      <th>MENU</th>
+      <th>ZWL$</th> 
+      <th>DELETE</th>
+    </tr>
+    <tr>
+      <td><input class="itemName" type="text" value="Sadza & Beef"></td>
+      <td><input class="itemCost" type="number" value="2000"></td> 
+      <td><span class="deleteMenuItem">+</span></td>
+    </tr>
+    <tr>
+      <td><input class="itemName" type="text" value="Sadza & Soup"></td>
+      <td><input class="itemCost" type="number" value="1000"></td> 
+      <td><span class="deleteMenuItem">+</span></td>
+    </tr>
+    <tr>
+      <td><input class="itemName" type="text" value="Sadza & Chunks"></td>
+      <td><input class="itemCost" type="number" value="1000"></td> 
+      <td><span class="deleteMenuItem">+</span></td>
+    </tr>
+    <tr>
+      <td><input class="itemName" type="text" value="Rice & Chicken"></td>
+      <td><input class="itemCost" type="number" value="2000"></td> 
+      <td><span class="deleteMenuItem">+</span></td>
+    </tr>
+    <tr>
+      <td><input class="itemName" type="text" value="Rice & Beef"></td>
+      <td><input class="itemCost" type="number" value="2000"></td>  
+      <td><span class="deleteMenuItem">+</span></td>
+    </tr>
+    <tr>
+      <td><input class="itemName" type="text" value="Rice & Soup"></td>
+      <td><input class="itemCost" type="number" value="1000"></td>  
+      <td><span class="deleteMenuItem">+</span></td>
+    </tr>
+    <tr>
+      <td><input class="itemName" type="text" value="Rice & Chunks"></td>
+      <td><input class="itemCost" type="number" value="1000"></td> 
+      <td><span class="deleteMenuItem">+</span></td>
+    </tr>
+    <tr>
+      <td><input class="itemName" type="text" value="Plain Chips"></td>
+      <td><input class="itemCost" type="number" value="1000"></td> 
+      <td><span class="deleteMenuItem">+</span></td>
+    </tr>
+    <tr>
+      <td><input class="itemName" type="text" value="Chips & Chicken"></td>
+      <td><input class="itemCost" type="number" value="2000"></td> 
+      <td><span class="deleteMenuItem">+</span></td>
+    </tr>
+    <tr>
+      <td><input class="itemName" type="text" value="Chips & Beef"></td>
+      <td><input class="itemCost" type="number" value="2000"></td> 
+      <td><span class="deleteMenuItem">+</span></td>
+    </tr>
+    <tr>
+      <td><input class="itemName" type="text" value="Fruit"></td>
+      <td><input class="itemCost" type="number" value="500"></td> 
+      <td><span class="deleteMenuItem">+</span></td>
+    </tr> 
+    <tr class="addMenuItem">
+      <td><input type="text" id="menuItemName" required></td>
+      <td><input type="text" id="menuItemCost" required></td>
+      <td></td>
+    </tr>
+    <tr id="createContainer">
+      <td id="createMenuContainer" colspan="3">
+        <button id="createAddMenuField">+ Add Item</button>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <!-- <tr id="submitContainer">
+      <td id="menuItemSubmitContainer" colspan="3">
+        <input type="submit" id="menuItemSubmit" value="Submit">
+      </td>
+      <td></td>
+      <td></td>
+    </tr> -->
+  </table>
+</form>
+</section>
+<div id="loggedOutPlaceholder">
+  <span>LOGIN TO MANAGE THE SYSTEM</span>
+</div>
+<script src="scripts/admin.js"></script>
+<footer>
+  <span>Copyright &copy;</span>
+  <span><a href="index.html">SmartEat</a></span>
+  <span>&nbsp;| 2023.&nbsp;</span> 
+</footer>  
+</body>
+</html>

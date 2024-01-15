@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartEat</title> 
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">
+      <img src="images/logo.png">
+    </a>
+    <div id="studentDetails">
+      <div id="regNumber">
+        <h2><span>REGISTRATION NUMBER</span></h2>
+        <div id="regNum"></div>
+      </div>
+      <div id="goldBalance">
+        <h2><span>GOLD CARD BALANCE</span>&nbsp;&nbsp;<span id="topUp">Top Up</span></h2>
+        <form id="topUpContainer" action="#">
+          <span id="closeTopUp">+</span>
+          <input type="number" placeholder="Enter Amount" required id="toppedUpAmount">
+          <input type="tel" placeholder="Ecocash Phone Number" pattern="[0-9]{10}" required id="ecocashNumber">
+          <input type="submit" value="TopUp" id="calcTopUp">
+        </form>
+        <div id="balance">
+          <span>ZWL$</span><span id="zwlBalance">0</span>
+        </div>
+      </div>
+    </div>
+    <div id="login">
+      <button>Login</button>
+    </div>
+    <!-- END OF NAV -->
+  </nav>
+  <h1>Easily purchase your meals with SmartEat</h1>
+  <section>
+   
+    <table id="menuTable">
+      <tr>
+        <th>MENU</th>
+        <th>ZWL$</th>
+        <th>QUANTITY</th>
+      </tr>
+      <tr>
+        <td>Sadza & Chicken</td>
+        <td>$2000</td>
+        <td class="plusminus"><button>-</button><span>0</span><button>+</button></td>
+      </tr>
+      <tr>
+        <td>Sadza & Beef</td>
+        <td>$2000</td>
+        <td class="plusminus"><button>-</button><span>0</span><button>+</button></td>
+      </tr>
+      <tr>
+        <td>Sadza & Soup</td>
+        <td>$1000</td>
+        <td class="plusminus"><button>-</button><span>0</span><button>+</button></td>
+      </tr>
+      <tr>
+        <td>Sadza & Chunks</td>
+        <td>$1000</td>
+        <td class="plusminus"><button>-</button><span>0</span><button>+</button></td>
+      </tr>
+      <tr>
+        <td>Rice & Chicken</td>
+        <td>$2000</td>
+        <td class="plusminus"><button>-</button><span>0</span><button>+</button></td>
+      </tr>
+      <tr>
+        <td>Rice & Beef</td>
+        <td>$2000</td>
+        <td class="plusminus"><button>-</button><span>0</span><button>+</button></td>
+      </tr>
+      <tr>
+        <td>Rice & Soup</td>
+        <td>$1000</td>
+        <td class="plusminus"><button>-</button><span>0</span><button>+</button></td>
+      </tr>
+      <tr>
+        <td>Rice & Chunks</td>
+        <td>$1000</td> 
+        <td class="plusminus"><button>-</button><span>0</span><button>+</button></td>
+      </tr>
+      <tr>
+        <td>Plain Chips</td>
+        <td>$1000</td>
+        <td class="plusminus"><button>-</button><span>0</span><button>+</button></td>
+      </tr>
+      <tr>
+        <td>Chips & Chicken</td>
+        <td>$2000</td>
+        <td class="plusminus"><button>-</button><span>0</span><button>+</button></td>
+      </tr>
+      <tr>
+        <td>Chips & Beef</td>
+        <td>$2000</td>
+        <td class="plusminus"><button>-</button><span>0</span><button>+</button></td>
+      </tr>
+      <tr>
+        <td>Fruit</td>
+        <td>$500</td>
+        <td class="plusminus"><button>-</button><span>0</span><button>+</button></td>
+      </tr>
+      <tr>
+        <th>TOTAL</th>
+        <th id="zwlTotal">$0</th>
+        <th id="itemsTotal">0 ITEMS</th>
+      </tr>
+    </table>
+    <div id="payment">
+      <h2>SELECT PAYMENT METHOD</h2>
+        <div id="ecocash" class="labels"></div>
+        <input type="tel" placeholder="Enter Phone Number" required>
+        <div id="goldcard" class="labels">GOLDCARD</div>
+        <br><button id="buy">BUY</button>
+      <p id="errorMsg"></p>
+      <div id="purchaseComplete">
+        <span id="closeSuccessMsg">X</span>
+        <p>
+          <span id="amountPaid" class="spans"></span><br>
+          <span class="spans">Payment Success</span>
+        </p>
+        <p>
+          <span class="spans">Order Number</span><br>
+          <span id="orderNum" class="yourOrderNumber spans"></span>
+        </p>
+        <span class="spans">Collect your receipt at the kiosk <span> 
+      </div>
+    </div>
+  </section>
+  <!-- END OF MAIN SECTION -->
+  <!-- POPUP -->
+  <div id="popup">
+    <span id="closeModal">+</span>
+    <form action="#" id="loginForm">
+      <input type="text" id="regNumberInput" min="8" placeholder="Registation Number" required>
+      <input type="password" id="passInput" placeholder="Password" required>
+      <input type="submit" value="Sign In">
+    </form>
+  </div> <!-- END OF POPUP -->
+  <!-- PAYNOW -->
+  <div id="paynow">
+    <span class="closePopup">+</span>
+    <img src="images/ecocashSucesss.png">
+    <span class="ecoAmountPaid"></span>
+    <span>Payment Success</span>
+    <span>Order Number</span>
+    <span class="ecoOrderNum yourOrderNumber"></span>
+    <span>Collect your receipt at the kiosk</span>
+  </div> <!-- PAYNOW -->
+  <footer>
+    <span>Copyright &copy;</span>
+    <span><a href="index.html">SmartEat</a></span>
+    <span>&nbsp;| 2023.&nbsp;</span> 
+  </footer>
+  <!-- END OF FOOTER -->
+  <script src="scripts/script.js"></script>
+</body>
+</html>
